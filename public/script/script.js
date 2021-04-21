@@ -1,5 +1,6 @@
 const socket = io();
 
+const ROOM_NAME = document.querySelector("#room_name");
 const LEAVE_BTN = document.querySelector("#leave-btn");
 const SEND_FORM = document.querySelector("#send-form");
 const SEND_INPUT = document.querySelector("#input-message");
@@ -12,6 +13,7 @@ const { username, room } = Qs.parse(location.search, {
 
 // ===========================================
 socket.emit("JOIN_ROOM", { username, room });
+ROOM_NAME.innerText = room;
 
 socket.on("NEW_USER", (data) => {
   appendMessage(data);
