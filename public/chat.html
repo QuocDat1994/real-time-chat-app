@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyChat Room</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesheet/style.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+    ></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="script/script.js"></script>
   </head>
   <body>
     <section class="container">
@@ -22,66 +28,23 @@
         </div>
         <div class="user-list">
           <div><i class="fas fa-users"></i> Users</div>
-          <ul id="user-list">
-            <li>Test</li>
-            <li>1dsa</li>
-            <li>dsa</li>
-            <li>55</li>
-            <li>hh</li>
-          </ul>
+          <ul id="user-list"></ul>
         </div>
         <div class="author">
           By
           <a href="https://www.linkedin.com/in/dattruongnq/" target="_blank">
-            Dat Truong @ 2021
+            Dat Truong © 2021
           </a>
         </div>
       </section>
       <section class="container__right">
         <section class="room-info">
           <span class="room-info__name">Room Name</span>
-          <button class="room-info__leave-btn">Leave Room</button>
+          <button id="leave-btn" class="room-info__leave-btn">
+            Leave Room
+          </button>
         </section>
-        <section class="message-list">
-          <div class="message">
-            <img
-              class="message__avatar"
-              src="https://ui-avatars.com/api/?name=John+Doe"
-              alt=""
-            />
-            <div class="message__username">John Doe</div>
-            <div class="message__time">9:00 PM</div>
-            <div class="message__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ad
-              nostrum similique, itaque illo minus autem facere a officia
-              inventore culpa.
-            </div>
-          </div>
-          <div class="message">
-            <img
-              class="message__avatar"
-              src="https://ui-avatars.com/api/?name=John+Doe"
-              alt=""
-            />
-            <div class="message__username">John Doe</div>
-            <div class="message__time">9:00 PM</div>
-            <div class="message__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ad
-              nostrum similique, itaque illo minus autem facere a officia
-              inventore culpa.
-            </div>
-          </div>
-          <div class="message">
-            <img
-              class="message__avatar"
-              src="https://ui-avatars.com/api/?name=John+Doe"
-              alt=""
-            />
-            <div class="message__username">John Doe</div>
-            <div class="message__time">9:00 PM</div>
-            <div class="message__text">Lorem ipsum dolor</div>
-          </div>
-        </section>
+        <section id="message-list" class="message-list"></section>
         <form id="send-form" class="send-form">
           <input
             type="text"

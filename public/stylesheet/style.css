@@ -205,6 +205,8 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container .container__right .message-list .message {
