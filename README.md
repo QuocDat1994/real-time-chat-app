@@ -9,4 +9,4 @@ A simple chat app made with ❤, Socket.io and Express.
 
 Demo: https://real-time-chat-app-quocdat1994.herokuapp.com/
 
-![preview](https://i.ibb.co/nwQTHNm/realtime-chat-app.png)
+![preview](https://i.ibb.co/LzDmkHN/real-time-chat-app.png)
