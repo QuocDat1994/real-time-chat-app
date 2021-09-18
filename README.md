@@ -5,8 +5,8 @@ Real Time Chat App
 ![](https://img.shields.io/badge/node-express-brightgreen)
 ![](https://img.shields.io/badge/socket-io-lightgrey)
 
-A simple chat app made with ❤, Socket.io and Express. 
+A simple chat app made with Socket.io, Express and ❤
 
 Demo: https://real-time-chat-app-quocdat1994.herokuapp.com/
 
-![preview](https://i.ibb.co/LzDmkHN/real-time-chat-app.png)
+![preview](https://i.ibb.co/bHPWnjd/image.png)
